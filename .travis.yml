@@ -1,0 +1,57 @@
+language: python
+python: 3.5
+
+env:
+    - CC=clang   CXX=clang++
+
+addons:
+    apt:
+        sources:
+            - ubuntu-toolchain-r-test
+        packages:
+            - gcc-5
+            - g++-5
+
+install:
+  - sudo apt-get update
+  # We do this conditionally because it saves us some downloading if the
+  # version is the same.
+  - if [[ "$TRAVIS_PYTHON_VERSION" == "2.7" ]]; then
+      wget https://repo.continuum.io/miniconda/Miniconda2-latest-Linux-x86_64.sh -O miniconda.sh;
+    else
+      wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh;
+    fi
+  - bash miniconda.sh -b -p $HOME/miniconda
+  - export PATH="$HOME/miniconda/bin:$PATH"
+  - hash -r
+  - conda config --set always_yes yes --set changeps1 no
+  - conda update -q conda
+  # Useful for debugging any issues with conda
+  - conda info -a
+  - pip install -r requirements.txt
+  - pip install python-coveralls
+  - pip install coverage
+  - python setup.py build_ext --inplace
+  - make install
+
+
+# Run test
+script:
+  - make coverage
+
+# Calculate coverage
+after_success:
+  - coveralls
+
+# After you create the Github repo and add it to Travis, run the
+# travis_pypi_setup.py script to finish PyPI deployment setup
+deploy:
+  provider: pypi
+  distributions: sdist bdist_wheel
+  user: pchandar
+  password:
+    secure: PLEASE_REPLACE_ME
+  on:
+    tags: true
+    repo: pchandar/nlutk
+    condition: $TOXENV == py35

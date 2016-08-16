@@ -1,0 +1,12 @@
+[run]
+plugins = Cython.Coverage
+branch = True
+source = nlutk
+include = */nlutk/*
+
+[report]
+omit =
+    #*/python?.?/*
+    *__init__*
+    *setup.py*
+    */tests/test_*
