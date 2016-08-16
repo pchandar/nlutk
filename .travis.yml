@@ -30,7 +30,7 @@ install:
   - conda info -a
   - pip install -r requirements.txt
   - pip install python-coveralls
-  - pip install coverage
+  - pip install coverage==3.7.1 #need this version for coveralls.io to work
   - make install
 
 

@@ -13,10 +13,9 @@ Natural Language Understanding Toolkit
         :target: https://nlutk.readthedocs.io/en/latest/?badge=latest
         :alt: Documentation Status
 
-.. image:: https://pyup.io/repos/github/pchandar/nlutk/shield.svg
-     :target: https://pyup.io/repos/github/pchandar/nlutk/
-     :alt: Updates
-
+.. image:: https://coveralls.io/repos/github/pchandar/nlutk/badge.svg?branch=develop
+     :target: https://coveralls.io/github/pchandar/nlutk?branch=develop
+     :alt: Coverage Status
 
 .. image:: https://img.shields.io/github/license/mashape/apistatus.svg?maxAge=2592000
      :target: https://github.com/fchollet/keras/blob/master/LICENSE
