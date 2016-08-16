@@ -31,7 +31,6 @@ install:
   - pip install -r requirements.txt
   - pip install python-coveralls
   - pip install coverage
-  - python setup.py build_ext --inplace
   - make install
 
 
