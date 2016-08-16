@@ -28,9 +28,12 @@ install:
   - conda update -q conda
   # Useful for debugging any issues with conda
   - conda info -a
-  - pip install -r requirements.txt
-  - pip install python-coveralls
+  - pip install python-coveralls==2.4.3
   - pip install coverage==3.7.1 #need this version for coveralls.io to work
+  - pip install pytest-cov==2.3.1
+  - pip install pytest-cython>=0.1.0
+  - pip install coveralls==1.1
+  - pip install -r requirements.txt
   - make install
 
 

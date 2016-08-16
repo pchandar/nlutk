@@ -124,7 +124,7 @@ cdef class Vocab:
                 self.vocab[self.vocab_size - 1].count = set_count
             if self.vocab_size > self.vocab_hash_size * 0.7:
                 self.shrink_vocab()
-                return self.vocab_size - 1
+            return self.vocab_size - 1
         else:
             self.vocab[idx].count += 1
             return idx

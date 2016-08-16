@@ -2496,7 +2496,7 @@ static PyObject *__pyx_pf_5nlutk_4text_5vocab_5Vocab_10add(struct __pyx_obj_5nlu
  *                 self.vocab[self.vocab_size - 1].count = set_count
  *             if self.vocab_size > self.vocab_hash_size * 0.7:             # <<<<<<<<<<<<<<
  *                 self.shrink_vocab()
- *                 return self.vocab_size - 1
+ *             return self.vocab_size - 1
  */
     __Pyx_TraceLine(125,0,{__pyx_filename = __pyx_f[0]; __pyx_lineno = 125; __pyx_clineno = __LINE__; goto __pyx_L1_error;})
     __pyx_t_7 = ((__pyx_v_self->vocab_size > (__pyx_v_self->vocab_hash_size * 0.7)) != 0);
@@ -2506,7 +2506,7 @@ static PyObject *__pyx_pf_5nlutk_4text_5vocab_5Vocab_10add(struct __pyx_obj_5nlu
  *                 self.vocab[self.vocab_size - 1].count = set_count
  *             if self.vocab_size > self.vocab_hash_size * 0.7:
  *                 self.shrink_vocab()             # <<<<<<<<<<<<<<
- *                 return self.vocab_size - 1
+ *             return self.vocab_size - 1
  *         else:
  */
       __Pyx_TraceLine(126,0,{__pyx_filename = __pyx_f[0]; __pyx_lineno = 126; __pyx_clineno = __LINE__; goto __pyx_L1_error;})
@@ -2514,29 +2514,29 @@ static PyObject *__pyx_pf_5nlutk_4text_5vocab_5Vocab_10add(struct __pyx_obj_5nlu
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-      /* "nlutk/text/vocab.pyx":127
- *             if self.vocab_size > self.vocab_hash_size * 0.7:
- *                 self.shrink_vocab()
- *                 return self.vocab_size - 1             # <<<<<<<<<<<<<<
- *         else:
- *             self.vocab[idx].count += 1
- */
-      __Pyx_TraceLine(127,0,{__pyx_filename = __pyx_f[0]; __pyx_lineno = 127; __pyx_clineno = __LINE__; goto __pyx_L1_error;})
-      __Pyx_XDECREF(__pyx_r);
-      __pyx_t_3 = __Pyx_PyInt_From_PY_LONG_LONG((__pyx_v_self->vocab_size - 1)); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 127; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
-      __Pyx_GOTREF(__pyx_t_3);
-      __pyx_r = __pyx_t_3;
-      __pyx_t_3 = 0;
-      goto __pyx_L0;
-
       /* "nlutk/text/vocab.pyx":125
  *             else:
  *                 self.vocab[self.vocab_size - 1].count = set_count
  *             if self.vocab_size > self.vocab_hash_size * 0.7:             # <<<<<<<<<<<<<<
  *                 self.shrink_vocab()
- *                 return self.vocab_size - 1
+ *             return self.vocab_size - 1
  */
     }
+
+    /* "nlutk/text/vocab.pyx":127
+ *             if self.vocab_size > self.vocab_hash_size * 0.7:
+ *                 self.shrink_vocab()
+ *             return self.vocab_size - 1             # <<<<<<<<<<<<<<
+ *         else:
+ *             self.vocab[idx].count += 1
+ */
+    __Pyx_TraceLine(127,0,{__pyx_filename = __pyx_f[0]; __pyx_lineno = 127; __pyx_clineno = __LINE__; goto __pyx_L1_error;})
+    __Pyx_XDECREF(__pyx_r);
+    __pyx_t_3 = __Pyx_PyInt_From_PY_LONG_LONG((__pyx_v_self->vocab_size - 1)); if (unlikely(!__pyx_t_3)) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 127; __pyx_clineno = __LINE__; goto __pyx_L1_error;}
+    __Pyx_GOTREF(__pyx_t_3);
+    __pyx_r = __pyx_t_3;
+    __pyx_t_3 = 0;
+    goto __pyx_L0;
 
     /* "nlutk/text/vocab.pyx":101
  *         cdef long long idx = self.index(word);
@@ -2545,11 +2545,10 @@ static PyObject *__pyx_pf_5nlutk_4text_5vocab_5Vocab_10add(struct __pyx_obj_5nlu
  *             length = strlen(c_string) + 1
  * 
  */
-    goto __pyx_L3;
   }
 
   /* "nlutk/text/vocab.pyx":129
- *                 return self.vocab_size - 1
+ *             return self.vocab_size - 1
  *         else:
  *             self.vocab[idx].count += 1             # <<<<<<<<<<<<<<
  *             return idx
@@ -2575,7 +2574,6 @@ static PyObject *__pyx_pf_5nlutk_4text_5vocab_5Vocab_10add(struct __pyx_obj_5nlu
     __pyx_t_3 = 0;
     goto __pyx_L0;
   }
-  __pyx_L3:;
 
   /* "nlutk/text/vocab.pyx":94
  *         return self.vocab_size
@@ -2586,8 +2584,6 @@ static PyObject *__pyx_pf_5nlutk_4text_5vocab_5Vocab_10add(struct __pyx_obj_5nlu
  */
 
   /* function exit code */
-  __pyx_r = Py_None; __Pyx_INCREF(Py_None);
-  goto __pyx_L0;
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_2);

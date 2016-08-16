@@ -5,6 +5,10 @@ from nlutk.text import Vocab
 datapath = lambda fname: pkg_resources.resource_filename('tests', 'data/' + fname)
 
 
+def test_add():
+    v = Vocab()
+    assert v.add('dummy') == 0
+
 def test_get_count():
     v = Vocab()
     v.add('test')
